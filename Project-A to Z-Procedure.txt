@@ -1,0 +1,68 @@
+						SignLanguageDetection Project
+
+[" I divided SignLanguageDetection Project in three(3) steps. "]
+
+Step 1: Data-Collection Part
+
+1. Create a Fresh Pycharm Project with "SignLanguageDetection" name.
+2. Create "dataCollection.py" file for Collecting Data.
+3. Create "collectedData" Directory to store Collected Data inside to the Project.
+
+4. Install "cvzone" Packages.
+5. Install "mediapipe" packages.
+
+6. Open WebCam.
+7. Finding Hands.
+
+8. Cropping the image -coz for now "we only need the hands".
+9. collect bounding box information.
+10. Crop all images and make all the images at the same size.
+11. Overlay Crop Image inside White Background Image Window.
+12. Resize Image in a specific value.
+
+13. Save White-image in "collectedData" Directory.
+14. Manually Save with "s" key.
+
+Step 2: Data-Processing Part
+1. Create a model folder.
+2. go to link: https://teachablemachine.withgoogle.com/train
+3: create an 'image project'.
+4. define separate folder and upload collectedData images.
+5. click to train and download keras file.
+6. move downloaded keras file inside 'SignLanguageDetection/model'.
+
+
+Step 3: Data-Retrieve Part(Read & Write)
+
+1. install "tensorflow" packages.
+2. Import Classifier from ClassificationModule.
+
+3. Copy original image and hiding hand mark.
+4. define classifier and give "Keras & labels" file path from Model folder.
+5. define labels array [Only add those which added into keras model ].
+6.design the bounding box [ Font, color , scale, thickness, color, height & width].
+7. print predictions on screen.
+
+
+Show on GitHub:
+1. open link : https://github.com/engr-akramulhoque/SignLanguageDetection.git
+2. change main to master
+3. read "Project-A to Z-Procedure.txt"
+
+Step to download this:
+1. create a empty folder inside Desktop. [ foldername = "projects"]
+2. open command-prompt and go to the "projects" folder. command = cd C:\Users\Dell\Desktop\projects
+3. run this command:- git clone https://github.com/engr-akramulhoque/SignLanguageDetection.git
+4. then go to  "SignLanguageDetection" directory.
+5. open with Pycharm.
+6. click to file and go to settings
+7. find "Python Interpreter" inside "Project:SignLanguageDetection"
+8. Install "cvzone" Packages.
+9. Install "mediapipe" packages.
+10. let's run "dataCollection.py" and show the output.
+11. show a hand-sign on computer screen and press "s" key 5 times from your keyboard.
+12. Check 5 images store inside "collectedData/A".
+
+13. install "tensorflow v-2.9.1" packages.
+13. let's run 'signPrediction.py' and show sign in window.
+14. now you will show the magic is started.
